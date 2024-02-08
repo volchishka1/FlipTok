@@ -4,8 +4,8 @@ import React from 'react';
 
 export const SearchScreenComponent = () => {
   return (
-    <View>
-      <Text>{'SearchScreen'}</Text>
+    <View style={{ backgroundColor: '#1d014b', flex: 1 }}>
+      <Text style={{ color: 'white' }}>{'SearchScreen'}</Text>
     </View>
   );
 };
