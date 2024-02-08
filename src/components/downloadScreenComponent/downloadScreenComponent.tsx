@@ -4,8 +4,8 @@ import React from 'react';
 
 export const DownloadScreenComponent = () => {
   return (
-    <View>
-      <Text>{'Hello app'}</Text>
+    <View style={{ backgroundColor: '#1d014b', flex: 1 }}>
+      <Text style={{ color: 'white' }}>{'Hello app'}</Text>
     </View>
   );
 };
