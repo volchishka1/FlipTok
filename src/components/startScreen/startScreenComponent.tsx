@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 
 import React, { FC, useEffect } from 'react';
 
@@ -6,6 +6,7 @@ import { CompositeScreenProps } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import LottieView from 'lottie-react-native';
 
+import { LogoSvg } from '../../../assets/logo';
 import { ROUTES } from '../../constants/routes';
 import { MainStackScreenNavigatorParamList } from '../../navigation/types';
 
@@ -27,7 +28,21 @@ export const StartScreenComponent: FC<StartScreenComponentProps> = (props) => {
   });
 
   return (
-    <View style={{ height: '100%' }}>
+    <View style={{ height: '100%', backgroundColor: '#1d014b' }}>
+      <StatusBar backgroundColor={'#1d014b'} />
+      <View
+        style={{
+          top: '20%',
+          height: '15%',
+          justifyContent: 'center',
+          alignItems: 'center',
+          // backgroundColor: '#6f42c1',
+          borderBottomLeftRadius: 100,
+          borderBottomRightRadius: 100,
+        }}
+      >
+        <LogoSvg />
+      </View>
       <LottieView
         source={require('../../../assets/animation_lkgrv9gp.json')}
         autoPlay={true}
