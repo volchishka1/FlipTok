@@ -2,9 +2,9 @@ import React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { MainScreenComponent } from '../components/mainScreen/mainScreenComponent';
 import { StartScreenComponent } from '../components/startScreen/startScreenComponent';
 import { ROUTES } from '../constants/routes';
-import { MainScreen } from '../tabs/MainScreen';
 
 export const AppStack = () => {
   const Stack = createNativeStackNavigator();
@@ -12,7 +12,7 @@ export const AppStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name={ROUTES.START_SCREEN} component={StartScreenComponent} />
-      <Stack.Screen name={ROUTES.MAIN_SCREEN} component={MainScreen} />
+      <Stack.Screen name={ROUTES.MAIN_SCREEN} component={MainScreenComponent} />
     </Stack.Navigator>
   );
 };
