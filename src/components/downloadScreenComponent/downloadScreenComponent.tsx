@@ -2,9 +2,11 @@ import { Text, View } from 'react-native';
 
 import React from 'react';
 
+import { downloadScreenStyles } from './downloadScreenStyles';
+
 export const DownloadScreenComponent = () => {
   return (
-    <View style={{ backgroundColor: '#1d014b', flex: 1 }}>
+    <View style={downloadScreenStyles.rootContainer}>
       <Text style={{ color: 'white' }}>{'Hello app'}</Text>
     </View>
   );
