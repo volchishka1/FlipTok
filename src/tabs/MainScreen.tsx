@@ -4,9 +4,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { FolderSvg } from '../../assets/folder';
 import { SearchSvg } from '../../assets/search';
-import { DownloadScreenComponent } from '../components/downloadScreenComponent/downloadScreenComponent';
-import { SearchScreenComponent } from '../components/searchScreen/searchScreenComponent';
+import { SettingSvg } from '../../assets/setting';
 import { ROUTES } from '../constants/routes';
+import { DownloadScreenComponent } from '../screens/downloadScreenComponent/downloadScreenComponent';
+import { PersonalInfoComponent } from '../screens/personalInfoScreen/personalInfoComponent';
+import { SearchScreenComponent } from '../screens/searchScreen/searchScreenComponent';
 
 export const MainScreen = () => {
   const Tab = createBottomTabNavigator();
@@ -35,6 +37,16 @@ export const MainScreen = () => {
           tabBarLabel: 'Downloads',
           tabBarIcon: (focused) => {
             return <FolderSvg />;
+          },
+        }}
+      />
+      <Tab.Screen
+        name={ROUTES.PERSONAL_INFO}
+        component={PersonalInfoComponent}
+        options={{
+          tabBarLabel: 'Information',
+          tabBarIcon: (focused) => {
+            return <SettingSvg />;
           },
         }}
       />
