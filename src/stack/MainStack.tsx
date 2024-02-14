@@ -2,11 +2,11 @@ import React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { MainScreenComponent } from '../components/mainScreen/mainScreenComponent';
-import { StartScreenComponent } from '../components/startScreen/startScreenComponent';
 import { ROUTES } from '../constants/routes';
+import { MainScreenComponent } from '../screens/mainScreen/mainScreenComponent';
+import { StartScreenComponent } from '../screens/startScreen/startScreenComponent';
 
-export const AppStack = () => {
+export const MainStackNavigator = () => {
   const Stack = createNativeStackNavigator();
 
   return (
