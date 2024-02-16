@@ -1,9 +1,9 @@
 import { StyleSheet, ViewStyle } from 'react-native';
 
-export type PersonalInfoScreenStyles = {
+export type InfoScreenStyles = {
   rootContainer: ViewStyle;
 };
 
-export const personalInfoScreenStyles = StyleSheet.create<PersonalInfoScreenStyles>({
+export const infoScreenStyles = StyleSheet.create<InfoScreenStyles>({
   rootContainer: { backgroundColor: '#1d014b', flex: 1 },
 });
