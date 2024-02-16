@@ -6,10 +6,10 @@ import { CompositeScreenProps } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import { LogoSvg } from '../../../assets/logo';
+import { LoaderComponent } from '../../components/loaderComponent/loaderComponent';
 import { ROUTES } from '../../constants/routes';
 import { MainStackScreenNavigatorParamList } from '../../navigation/types';
 
-import { LoaderComponent } from './loaderComponent';
 import { startScreenStyles } from './startScreenStyles';
 
 export type StartScreenComponentProps = CompositeScreenProps<
