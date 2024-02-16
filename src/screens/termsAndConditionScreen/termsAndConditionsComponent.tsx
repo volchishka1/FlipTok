@@ -1,12 +1,21 @@
-import { Text, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
-import React from 'react';
+import React, { FC } from 'react';
 
-export const TermsAndConditionComponent = () => {
-  let navigation;
+import { CloseWindowSvg } from '../../../assets/closeModalWindow';
+
+export type TermsAndConditionsTypes = {
+  goToCloseBottomSheet: () => void;
+};
+
+export const TermsAndConditionComponent: FC<TermsAndConditionsTypes> = ({
+  goToCloseBottomSheet,
+}) => {
   return (
     <View>
-      <Text>{'TERMSANDCONDITION'}</Text>
+      <TouchableOpacity accessibilityRole={'button'} onPress={goToCloseBottomSheet}>
+        <CloseWindowSvg />
+      </TouchableOpacity>
     </View>
   );
 };
