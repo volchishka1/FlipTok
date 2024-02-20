@@ -6,9 +6,9 @@ import { FolderSvg } from '../../assets/folder';
 import { SearchSvg } from '../../assets/search';
 import { SettingSvg } from '../../assets/setting';
 import { ROUTES } from '../constants/routes';
-import { DownloadScreenComponent } from '../screens/downloadScreenComponent/downloadScreenComponent';
+import { DownloadScreen } from '../screens/downloadScreen';
 import { InfoScreen } from '../screens/personalInfoScreen';
-import { SearchScreenComponent } from '../screens/searchScreen/searchScreenComponent';
+import { SearchScreen } from '../screens/searchScreen';
 
 export const MainScreen = () => {
   const Tab = createBottomTabNavigator();
@@ -22,7 +22,7 @@ export const MainScreen = () => {
       }}>
       <Tab.Screen
         name={ROUTES.SEARCH_SCREEN}
-        component={SearchScreenComponent}
+        component={SearchScreen}
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ focused }) => {
@@ -32,7 +32,7 @@ export const MainScreen = () => {
       />
       <Tab.Screen
         name={ROUTES.DOWNLOAD_SCREEN}
-        component={DownloadScreenComponent}
+        component={DownloadScreen}
         options={{
           tabBarLabel: 'Downloads',
           tabBarIcon: (focused) => {
