@@ -1,20 +1,21 @@
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 
-import React, { useState } from 'react';
+import React, { FC } from 'react';
 
 import { LogoComponent } from '../../components/logoComponent/logoComponent';
 
-import { searchScreenStyles } from './searchScreenStyles';
+import { searchScreenStyles } from './styles';
+import { SearchScreenProps } from './types';
 
-export const SearchScreenComponent = () => {
-  const [value, setValue] = useState('');
+export const SearchScreenView: FC<SearchScreenProps> = (props) => {
+  const { value = '', setInputValue = () => {} } = props;
   return (
     <View style={searchScreenStyles.rootContainer}>
       <LogoComponent />
       <View style={{ flexDirection: 'row', alignItems: 'center', marginHorizontal: '5%' }}>
         <TextInput
           value={value}
-          onChangeText={(text) => setValue(text)}
+          onChangeText={setInputValue}
           accessibilityLabel={'Text input field'}
           style={searchScreenStyles.input}
         />
