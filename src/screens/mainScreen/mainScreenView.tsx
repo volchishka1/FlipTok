@@ -4,9 +4,9 @@ import React from 'react';
 
 import { MainScreen } from '../../tabs/MainScreen';
 
-import { mainScreenStyles } from './mainScreenStyles';
+import { mainScreenStyles } from './styles';
 
-export const MainScreenComponent = () => {
+export const MainScreenView = () => {
   return (
     <View style={mainScreenStyles.rootContainer}>
       <MainScreen />
