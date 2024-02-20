@@ -1,23 +1,21 @@
 import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 
-import React, { useMemo, useRef } from 'react';
+import React, { FC } from 'react';
 
 import { BottomSheetModal } from '@gorhom/bottom-sheet/src';
 
 import { TermsAndConditionComponent } from '../termsAndConditionScreen/termsAndConditionsComponent';
 
-import { infoScreenStyles } from './infoScreenStyles';
+import { infoScreenStyles } from './styles';
+import { InfoScreenViewProps } from './types';
 
-export const InfoComponent = () => {
-  const bottomSheetModalRef = useRef<BottomSheetModal>(null);
-  const snapPoints = useMemo(() => ['90%', '90%'], []);
-  const goToTermsAndConditionsModalScreen = () => {
-    bottomSheetModalRef.current?.present();
-  };
-
-  const goToCloseBottomSheet = () => {
-    bottomSheetModalRef.current?.close();
-  };
+export const InfoScreenView: FC<InfoScreenViewProps> = (props) => {
+  const {
+    bottomSheetModalRef,
+    snapPoints,
+    goToTermsAndConditionsModalScreen = () => {},
+    goToCloseBottomSheet = () => {},
+  } = props;
 
   return (
     <SafeAreaView style={infoScreenStyles.rootContainer}>
