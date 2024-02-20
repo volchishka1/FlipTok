@@ -7,7 +7,7 @@ import { SearchSvg } from '../../assets/search';
 import { SettingSvg } from '../../assets/setting';
 import { ROUTES } from '../constants/routes';
 import { DownloadScreenComponent } from '../screens/downloadScreenComponent/downloadScreenComponent';
-import { InfoComponent } from '../screens/personalInfoScreen/infoComponent';
+import { InfoScreen } from '../screens/personalInfoScreen';
 import { SearchScreenComponent } from '../screens/searchScreen/searchScreenComponent';
 
 export const MainScreen = () => {
@@ -42,7 +42,7 @@ export const MainScreen = () => {
       />
       <Tab.Screen
         name={ROUTES.PERSONAL_INFO}
-        component={InfoComponent}
+        component={InfoScreen}
         options={{
           tabBarLabel: 'Information',
           tabBarIcon: (focused) => {
