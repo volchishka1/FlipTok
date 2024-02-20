@@ -1,11 +1,11 @@
 import { StyleSheet, ViewStyle } from 'react-native';
 
-export type StartScreenStyles = {
+export type Style = {
   rootContainer: ViewStyle;
   centerContainer: ViewStyle;
 };
 
-export const startScreenStyles = StyleSheet.create<StartScreenStyles>({
+export const startScreenStyles = StyleSheet.create<Style>({
   rootContainer: { height: '100%', backgroundColor: '#1d014b' },
   centerContainer: {
     top: '20%',
