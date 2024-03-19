@@ -1,4 +1,4 @@
-import { FC, useMemo, useRef } from 'react';
+import { FC, useMemo, useRef, useState } from 'react';
 
 import { BottomSheetModal } from '@gorhom/bottom-sheet/src';
 
@@ -7,10 +7,20 @@ import { InfoScreenView } from './infoScreenView';
 export type InfoScreenProps = {};
 export const InfoScreen: FC<InfoScreenProps> = (props) => {
   const {} = props;
+  const [actionTriggered, setActionTriggered] = useState('');
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
   const snapPoints = useMemo(() => ['90%', '90%'], []);
-  const goToTermsAndConditionsModalScreen = () => {
+  const goToPrivacyPolicyModal = () => {
     bottomSheetModalRef.current?.present();
+    setActionTriggered('privacyPolicy');
+  };
+  const goToTermsAndConditionalsModal = () => {
+    bottomSheetModalRef.current?.present();
+    setActionTriggered('termsAndConditionals');
+  };
+  const goToContactsModal = () => {
+    bottomSheetModalRef.current?.present();
+    setActionTriggered('contacts');
   };
 
   const goToCloseBottomSheet = () => {
@@ -21,7 +31,10 @@ export const InfoScreen: FC<InfoScreenProps> = (props) => {
     <InfoScreenView
       bottomSheetModalRef={bottomSheetModalRef}
       snapPoints={snapPoints}
-      goToTermsAndConditionsModalScreen={goToTermsAndConditionsModalScreen}
+      actionTriggered={actionTriggered}
+      goToPrivacyPolicyModal={goToPrivacyPolicyModal}
+      goToTermsAndConditionalsModal={goToTermsAndConditionalsModal}
+      goToContactsModal={goToContactsModal}
       goToCloseBottomSheet={goToCloseBottomSheet}
     />
   );
