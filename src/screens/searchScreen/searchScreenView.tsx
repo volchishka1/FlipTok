@@ -20,7 +20,11 @@ export const SearchScreenView: FC<SearchScreenProps> = (props) => {
           accessibilityLabel={'Text input field'}
           style={searchScreenStyles.input}
         />
-        <TouchableOpacity style={searchScreenStyles.buttonStyle} accessibilityLabel={'button'}>
+        <TouchableOpacity
+          style={searchScreenStyles.buttonStyle}
+          accessibilityLabel={'button'}
+          onPress={setInputValue}
+        >
           <Text style={searchScreenStyles.textInput}>{'Скачать'}</Text>
         </TouchableOpacity>
       </View>
