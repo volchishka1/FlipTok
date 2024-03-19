@@ -4,11 +4,8 @@ export type Styles = {
   rootContainer: ViewStyle;
   inputContainer: ViewStyle;
   input: ViewStyle;
-  buttonSaveStyle: ViewStyle;
-  buttonInsertStyle: ViewStyle;
-  textButton: TextStyle;
-  buttonContainer: ViewStyle;
-  buttonInsertSvgStyle: ViewStyle;
+  buttonStyle: ViewStyle;
+  textInput: TextStyle;
 };
 
 export const searchScreenStyles = StyleSheet.create<Styles>({
@@ -17,43 +14,23 @@ export const searchScreenStyles = StyleSheet.create<Styles>({
     flexDirection: 'row',
     marginHorizontal: '5%',
   },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: 190,
-    marginLeft: -120,
-  },
   input: {
-    width: '80%',
+    width: '100%',
     height: 50,
     padding: 10,
     borderRadius: 7,
     backgroundColor: 'white',
   },
-  buttonSaveStyle: {
+  buttonStyle: {
     width: 80,
     height: 50,
     backgroundColor: '#be54ff',
     borderRadius: 7,
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft: -10,
   },
-  buttonInsertStyle: {
-    width: 100,
-    height: 30,
-    zIndex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#191a40',
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderRadius: 7,
-  },
-  buttonInsertSvgStyle: {
-    width: 30,
-    height: 18,
-  },
-  textButton: {
+  textInput: {
     color: 'white',
   },
 });
