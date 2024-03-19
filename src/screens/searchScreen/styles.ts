@@ -2,7 +2,6 @@ import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 
 export type Styles = {
   rootContainer: ViewStyle;
-  inputContainer: ViewStyle;
   input: ViewStyle;
   buttonStyle: ViewStyle;
   textInput: TextStyle;
@@ -16,7 +15,7 @@ export const searchScreenStyles = StyleSheet.create<Styles>({
     marginHorizontal: '5%',
   },
   input: {
-    width: '80%',
+    width: '100%',
     height: 50,
     padding: 10,
     borderRadius: 7,
