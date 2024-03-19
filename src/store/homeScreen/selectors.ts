@@ -1,0 +1,3 @@
+import { NameSpace, RootState } from '../root-reducer';
+
+export const getIsActive = (state: RootState): boolean => state[NameSpace.homeScreen].isActive;
