@@ -12,7 +12,7 @@ export const SearchScreenView: FC<SearchScreenProps> = (props) => {
   return (
     <View style={searchScreenStyles.rootContainer}>
       <LogoComponent />
-      <View style={{ flexDirection: 'row', alignItems: 'center', marginHorizontal: '5%' }}>
+      <View style={searchScreenStyles.inputContainer}>
         <TextInput
           value={value}
           onChangeText={setInputValue}

@@ -2,6 +2,7 @@ import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 
 export type Styles = {
   rootContainer: ViewStyle;
+  inputContainer: ViewStyle;
   input: ViewStyle;
   buttonStyle: ViewStyle;
   textInput: TextStyle;
@@ -9,8 +10,13 @@ export type Styles = {
 
 export const searchScreenStyles = StyleSheet.create<Styles>({
   rootContainer: { backgroundColor: '#1d014b', flex: 1 },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: '5%',
+  },
   input: {
-    width: '100%',
+    width: '80%',
     height: 50,
     padding: 10,
     borderRadius: 7,
@@ -23,7 +29,7 @@ export const searchScreenStyles = StyleSheet.create<Styles>({
     borderRadius: 7,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: -80,
+    marginLeft: -10,
   },
   textInput: {
     color: 'white',
