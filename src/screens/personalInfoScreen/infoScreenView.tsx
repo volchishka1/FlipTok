@@ -2,9 +2,7 @@ import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 
 import React, { FC } from 'react';
 
-import { BottomSheetModal } from '@gorhom/bottom-sheet/src';
-
-import { TermsAndConditionComponent } from '../termsAndConditionScreen/termsAndConditionsComponent';
+import { BottomSheetsModals } from '../../components/bottomSheets/bottomSheetsModals';
 
 import { infoScreenStyles } from './styles';
 import { InfoScreenViewProps } from './types';
@@ -13,23 +11,30 @@ export const InfoScreenView: FC<InfoScreenViewProps> = (props) => {
   const {
     bottomSheetModalRef,
     snapPoints,
-    goToTermsAndConditionsModalScreen = () => {},
+    actionTriggered,
+    goToTermsAndConditionalsModal = () => {},
+    goToPrivacyPolicyModal = () => {},
+    goToContactsModal = () => {},
     goToCloseBottomSheet = () => {},
   } = props;
 
   return (
     <SafeAreaView style={infoScreenStyles.rootContainer}>
-      <BottomSheetModal
-        handleComponent={null}
-        ref={bottomSheetModalRef}
-        index={1}
+      <BottomSheetsModals
+        actionTriggered={actionTriggered}
+        bottomSheetModalRef={bottomSheetModalRef}
         snapPoints={snapPoints}
-      >
-        <TermsAndConditionComponent goToCloseBottomSheet={goToCloseBottomSheet} />
-      </BottomSheetModal>
+        goToCloseBottomSheet={goToCloseBottomSheet}
+      />
       <View>
-        <TouchableOpacity accessibilityRole={'button'} onPress={goToTermsAndConditionsModalScreen}>
+        <TouchableOpacity accessibilityRole={'button'} onPress={goToTermsAndConditionalsModal}>
           <Text style={{ color: 'white' }}>{'Terms and conditions'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity accessibilityRole={'button'} onPress={goToPrivacyPolicyModal}>
+          <Text style={{ color: 'white' }}>{'Privacy policy'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity accessibilityRole={'button'} onPress={goToContactsModal}>
+          <Text style={{ color: 'white' }}>{'Contacts'}</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
