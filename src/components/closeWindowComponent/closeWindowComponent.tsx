@@ -4,13 +4,12 @@ import React, { FC } from 'react';
 
 import { CloseWindowSvg } from '../../../assets/closeModalWindow';
 
-export type TermsAndConditionsTypes = {
+export type CloseWindowComponentProps = {
   goToCloseBottomSheet: () => void;
 };
 
-export const TermsAndConditionComponent: FC<TermsAndConditionsTypes> = ({
-  goToCloseBottomSheet,
-}) => {
+export const CloseWindowComponent: FC<CloseWindowComponentProps> = (props) => {
+  const { goToCloseBottomSheet } = props;
   return (
     <View>
       <TouchableOpacity accessibilityRole={'button'} onPress={goToCloseBottomSheet}>
