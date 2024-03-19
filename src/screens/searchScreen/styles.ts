@@ -15,7 +15,7 @@ export const searchScreenStyles = StyleSheet.create<Styles>({
     marginHorizontal: '5%',
   },
   input: {
-    width: '100%',
+    width: '80%',
     height: 50,
     padding: 10,
     borderRadius: 7,

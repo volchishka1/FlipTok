@@ -9,9 +9,5 @@ export const SearchScreen = () => {
     setValue(text);
   };
 
-  const insertDataLink = () => {};
-
-  return (
-    <SearchScreenView value={value} setInputValue={setInputValue} insertDataLink={insertDataLink} />
-  );
+  return <SearchScreenView value={value} setInputValue={setInputValue} />;
 };
