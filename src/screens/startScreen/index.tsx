@@ -21,7 +21,7 @@ export const StartScreen: FC<StartScreenComponentProps> = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
       navigateToMainScreen();
-    }, 9000);
+    }, 3000);
   });
   return <StartScreenView />;
 };
