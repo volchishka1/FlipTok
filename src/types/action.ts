@@ -5,6 +5,8 @@ import { RootState } from '../store/root-reducer';
 
 export enum ActionType {
   ChangeActive = 'user/ChangeActive',
+  SaveData = 'user/SaveData',
+  SetLink = 'user/SetLink',
 }
 
 export type ThunkActionResult<R = Promise<void | boolean>> = ThunkAction<
