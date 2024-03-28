@@ -7,7 +7,7 @@ import { HttpCode } from '../constants/const';
 const createAPI = (): AxiosInstance => {
   const api = axios.create({
     // baseURL: url,
-    baseURL: 'https://fliptok.app/api/fetch?url={tiktok',
+    baseURL: 'https://fliptok.app/api/fetch?url=',
     // timeout: Number(process.env.REQUEST_TIMEOUT),
   });
 
