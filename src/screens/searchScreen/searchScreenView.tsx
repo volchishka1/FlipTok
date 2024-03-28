@@ -8,15 +8,14 @@ import { searchScreenStyles } from './styles';
 import { SearchScreenProps } from './types';
 
 export const SearchScreenView: FC<SearchScreenProps> = (props) => {
-  const { value = '', setInputValue = () => {} } = props;
+  const { text = '', link = '', setInputValue = () => {}, setLink = () => {} } = props;
   return (
     <View style={searchScreenStyles.rootContainer}>
       <LogoComponent />
       <View style={searchScreenStyles.inputContainer}>
         <TextInput
-          clearTextOnFocus={true}
-          value={value}
-          onChangeText={setInputValue}
+          value={link}
+          onChangeText={setLink}
           accessibilityLabel={'Text input field'}
           style={searchScreenStyles.input}
         />
@@ -27,6 +26,17 @@ export const SearchScreenView: FC<SearchScreenProps> = (props) => {
         >
           <Text style={searchScreenStyles.textInput}>{'Скачать'}</Text>
         </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          width: '100%',
+          height: 30,
+          backgroundColor: 'white',
+          alignItems: 'center',
+          marginTop: 20,
+        }}
+      >
+        <Text style={{ color: 'black', marginHorizontal: '10%' }}>{text}</Text>
       </View>
     </View>
   );
